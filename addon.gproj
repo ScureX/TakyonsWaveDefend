@@ -1,0 +1,8 @@
+GameProject {
+ ID "TakyonsWaveDefend"
+ GUID "6173737689AC6980"
+ TITLE "TakyonsWaveDefend"
+ Dependencies {
+  "595F2BF2F44836FB" "58D0FB3206B6F859" "5994AD5A9F33BE57"
+ }
+}

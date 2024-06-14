@@ -1,0 +1,13 @@
+GenericEntity {
+ ID "6174B320DE7C0053"
+ components {
+  MeshObject "{6174B32D637D1D2A}" {
+   Object "{B19CEB3A8EB65439}Assets/Structures/Signs/Tourist/TouristSign_01/TouristSign_01_Decal/TouristSign_01_decal.xob"
+  }
+  TKY_SpawnerComponent "{6174B3203586C08F}" {
+  }
+  Hierarchy "{6174B320DE7C01A3}" {
+  }
+ }
+ coords 2.669 2.2 2.926
+}

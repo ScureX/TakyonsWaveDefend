@@ -1,0 +1,16 @@
+SCR_EditorModeEntity : "{E56F54E533ACE527}Prefabs/Editor/Modes/EditorModeBase.et" {
+ ID "54F0A77282A3AA3B"
+ components {
+  SCR_PlacingEditorComponent "{5145484399BAA2E7}" {
+   m_Registries {
+    SCR_PlaceableEntitiesRegistry "{6178C4816A76C9E6}" {
+     m_sAddon "TakyonsWaveDefend"
+     m_sSourceDirectory "{93CB170DF046CA51}PrefabsEditable"
+     m_Prefabs {
+      "{868096473F5E8D8E}PrefabsEditable/TKY/E_Headquarters_S_US_spawner.et" "{A2BFD400ABDE1322}PrefabsEditable/TKY/backup_E_Spawner_Location.et"
+     }
+    }
+   }
+  }
+ }
+}

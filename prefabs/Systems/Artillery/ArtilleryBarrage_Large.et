@@ -1,0 +1,23 @@
+Bacon_FakeArtillery : "{2192782C5F6726C9}Prefabs/Systems/Artillery/ArtilleryBarrage_base.et" {
+ ID "59B0DBA387C10221"
+ components {
+  Bacon_RuntimeCustomAreaMeshComponent "{59B11DD1AEF0990A}" {
+   m_fRadius 22
+  }
+  SCR_EditableEntityComponent "{59B0E16DEADC633F}" {
+   m_UIInfo SCR_EditableEntityUIInfo "{59B0E16CB8AE0C6A}" {
+    Name "Artillery Barrage - Shell/Large"
+    Description "Artillery Barrage - Shell/Large"
+    m_Image "{3823A684EB4DE29B}Prefabs/Systems/Artillery/icon_barrage_large.edds"
+    m_EntityBudgetCost {
+     SCR_EntityBudgetValue "{59B0E16CA3288941}" {
+      m_Value 15
+     }
+    }
+   }
+  }
+ }
+ m_projectilePrefab "{217346AE0EBEDD8F}Prefabs/Systems/Artillery/ArtilleryWrapper_Large.et"
+ m_fireDelayRandomization 0 0.2 0
+ m_areaRadius 22
+}

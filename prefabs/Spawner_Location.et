@@ -1,0 +1,32 @@
+TKY_SpawnerLocation {
+ ID "6174B32D7D75923A"
+ components {
+  MeshObject "{6174B32D7D759202}" {
+   Object "{B19CEB3A8EB65439}Assets/Structures/Signs/Tourist/TouristSign_01/TouristSign_01_Decal/TouristSign_01_decal.xob"
+  }
+  SCR_EditableEntityComponent "{617B197111620BF4}" {
+   m_UIInfo SCR_EditableEntityUIInfo "{617B19714E599A72}" {
+    Name "(Spawner_Location)"
+    m_Image ""
+    m_sFaction "US"
+    m_aAuthoredLabels {
+     1001 41469
+    }
+    m_aAutoLabels {
+     1 121
+    }
+    m_EntityBudgetCost {
+     SCR_EntityBudgetValue "{617B2775E08A91B7}" {
+      m_BudgetType CAMPAIGN
+      m_Value 1
+     }
+    }
+   }
+  }
+  RplComponent "{617B2770BC70143F}" : "{B193E926C1935A4C}Prefabs/Editor/Components/Default_RplComponent.ct" {
+  }
+  Hierarchy "{6174B32D7D75920E}" {
+  }
+ }
+ coords 2.669 2.2 2.926
+}

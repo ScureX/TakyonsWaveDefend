@@ -1,0 +1,41 @@
+GenericEntity : "{13A99500A14FA14C}Prefabs/Props/Military/SupplyBox/SupplyShippingContainers/SupplyShippingContainers_01/SupplyShippingContainers_01_20ft.et" {
+ ID "F0DBA538AC2A0552"
+ components {
+  SCR_EditableEntityComponent "{5EF0C15DB54BB717}" : "{996046FE206C699A}Prefabs/Editor/Components/Default_SCR_EditableEntityComponent.ct" {
+   m_UIInfo SCR_EditableEntityUIInfo "{5298E609432D192D}" {
+    Name "(SupplyShippingContainers_01_20ft)"
+    m_Image ""
+    m_aAuthoredLabels {
+    }
+    m_aAutoLabels {
+     108 1 122
+    }
+   }
+  }
+  SCR_PreviewEntityComponent "{5EF0C15DB54A746F}" : "{6CADA7A88A6265FD}Prefabs/Editor/Components/PreviewEntityComponentClass.ct" {
+   m_bRuntime 0
+   m_aEntries {
+    SCR_BasePreviewEntry "{61755C11B09D2D48}" {
+     m_iParentID -1
+     m_Mesh "{C18F31776C072B7D}Assets/Props/Industrial/CargoContainer_01/CargoContainer_01_20ft.xob"
+     m_Flags EDITABLE
+     m_Shape MESH
+     m_iPivotID ""
+     m_vScale 1 1 1
+     m_vPosition 0 0 0
+     m_vAngles 0 0 0
+    }
+   }
+  }
+  SCR_ResourceComponent "{5D247A59598D71AE}" {
+   m_aContainers {
+    SCR_ResourceContainer "{5D3CDAE74F1A6127}" {
+     m_fResourceValueCurrent 200
+     m_fResourceValueMax 30000
+    }
+   }
+  }
+  TKY_ResourceComponent "{61756854037C644A}" {
+  }
+ }
+}

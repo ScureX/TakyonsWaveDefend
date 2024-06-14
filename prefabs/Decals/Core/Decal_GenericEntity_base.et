@@ -1,0 +1,12 @@
+GenericEntity {
+ ID "6174B32F4FCD8B41"
+ components {
+  MeshObject "{6174B32F4FCD8B4A}" {
+   Object "{B19CEB3A8EB65439}Assets/Structures/Signs/Tourist/TouristSign_01/TouristSign_01_Decal/TouristSign_01_decal.xob"
+   PixelSizeScale 3
+  }
+  Hierarchy "{6174B32F4FCD8B50}" {
+  }
+ }
+ coords 2.669 2.2 2.926
+}

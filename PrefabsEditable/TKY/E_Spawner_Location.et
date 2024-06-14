@@ -1,0 +1,40 @@
+TKY_SpawnerLocation {
+ ID "617B277531007EB5"
+ components {
+  MeshObject "{617B277531007EBD}" {
+   Object "{B19CEB3A8EB65439}Assets/Structures/Signs/Tourist/TouristSign_01/TouristSign_01_Decal/TouristSign_01_decal.xob"
+  }
+  RigidBody "{617B67DC9DBE98EC}" {
+   Active AlwaysActive
+   ResponseIndex "NoCollision"
+   Static 1
+  }
+  SCR_EditableEntityComponent "{617B277531007F45}" {
+   m_UIInfo SCR_EditableEntityUIInfo "{617B277531007F49}" {
+    Name "WAVE SPAWN LOCATION"
+    Icon "{2BB9FACCC5A47EEB}UI/Imagesets/Conflict/services-icons-bw.imageset"
+    m_Image "{0B03F611D52043AE}UI/Textures/placeholder.edds"
+    m_sFaction "US"
+    m_aAuthoredLabels {
+     1001 41469
+    }
+    m_aAutoLabels {
+     11
+    }
+    m_EntityBudgetCost {
+     SCR_EntityBudgetValue "{617B277531007F54}" {
+      m_BudgetType CAMPAIGN
+      m_Value 1
+     }
+    }
+   }
+   m_Flags 132355
+  }
+  RplComponent "{617B277661998B30}" {
+  }
+  Hierarchy "{617B277531007F53}" {
+  }
+ }
+ coords 2.669 2.2 2.926
+ Flags 1027
+}
