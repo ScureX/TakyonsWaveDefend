@@ -82,6 +82,37 @@ class TKY_EnemyBudgetStepAttribute : SCR_BaseValueListEditorAttribute
 
 
 [BaseContainerProps(), SCR_BaseEditorAttributeCustomTitle()]
+class TKY_EnemyFactionAttribute : SCR_BaseFloatValueHolderEditorAttribute
+{
+	override SCR_BaseEditorAttributeVar ReadVariable(Managed item, SCR_AttributesManagerEditorComponent manager)
+	{
+		TKY_SpawnerComponent spawner = TKY_SpawnerAttribute.IsValidEntity(item);
+		if (!spawner) {
+			return null;
+		};
+
+		//if (spawner.EditorAttributeGetActive()) {
+		//	return null;
+		//};
+
+		return SCR_BaseEditorAttributeVar.CreateInt(spawner.enemyFaction);
+	}
+	
+	override void WriteVariable(Managed item, SCR_BaseEditorAttributeVar var, SCR_AttributesManagerEditorComponent manager, int playerID)
+	{
+		if (!var) return;
+		
+		TKY_SpawnerComponent spawner = TKY_SpawnerAttribute.IsValidEntity(item);
+		if (!spawner) return;
+
+		//if (spawner.EditorAttributeGetActive()) return;
+		
+		spawner.enemyFaction = Math.Floor(var.GetFloat());
+	}
+};
+
+
+[BaseContainerProps(), SCR_BaseEditorAttributeCustomTitle()]
 class TKY_MinimumSubwaveDelayAttribute : SCR_BaseValueListEditorAttribute
 {
 	override SCR_BaseEditorAttributeVar ReadVariable(Managed item, SCR_AttributesManagerEditorComponent manager)

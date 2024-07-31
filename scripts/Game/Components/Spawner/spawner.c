@@ -32,17 +32,11 @@ class Enemy
 	}
 }
 
-/*
-	enum for 
-		normal enemy
-		special enemy config
-
-	give each a budget for wave
-*/
-
-/*
-	make objects spawnable and activateable in gm mode
-*/
+enum EnemyFaction {
+	RHS_AFRF = 0,
+	RHS_USAF = 1,
+	INDFOR = 2
+}
 
 class TKY_SpawnerComponent : ScriptComponent 
 {
@@ -55,6 +49,9 @@ class TKY_SpawnerComponent : ScriptComponent
 	[Attribute(defvalue: "300.0", UIWidgets.EditBox, "seconds between waves")]
 	float breakTimer; // seconds
 
+	[Attribute(defvalue: EnemyFaction.RHS_AFRF.ToString(), UIWidgets.EditBox, "which faction enemies are from [ RHS_AFRF:0 / RHS_USAF:1 / INDFOR:2]")]
+	int enemyFaction; 
+	
 	[Attribute(defvalue: "30.0", UIWidgets.EditBox, "enemy budget for spawning troops, higher = more/better enemies")]
 	float enemyBudgetStep; 
 	
@@ -156,13 +153,41 @@ class TKY_SpawnerComponent : ScriptComponent
 	void InitializeWave()
     {
         enemyPrefabs = new array<ref Enemy>();
-        enemyPrefabs = 
-        {
-            new Enemy("{0ACD74AD27EEEE7D}Prefabs/Groups/OPFOR/RHS_AFRF/MSV/VKPO_Demiseason/Group_RHS_RF_MSV_VKPO_DS_FireGroup.et", 50),
-            new Enemy("{DFF74E2181355AFD}Prefabs/Groups/OPFOR/RHS_AFRF/MSV/VKPO_Demiseason/Group_RHS_RF_MSV_VKPO_DS_Team_GL.et", 40),
-            new Enemy("{F40CDA3D5A7B1CDF}Prefabs/Groups/OPFOR/RHS_AFRF/MSV/VKPO_Demiseason/Group_RHS_RF_MSV_VKPO_DS_LightFireTeam.et", 25),
-            new Enemy("{60E2D587BE5A9B43}Prefabs/Groups/OPFOR/RHS_AFRF/MSV/VKPO_Demiseason/Group_RHS_RF_MSV_VKPO_DS_MachineGunTeam.et", 20)
-        };
+		if(enemyFaction == EnemyFaction.RHS_AFRF)
+		{
+			enemyPrefabs = 
+	        {
+	            new Enemy("{0ACD74AD27EEEE7D}Prefabs/Groups/OPFOR/RHS_AFRF/MSV/VKPO_Demiseason/Group_RHS_RF_MSV_VKPO_DS_FireGroup.et", 50),
+	            new Enemy("{DFF74E2181355AFD}Prefabs/Groups/OPFOR/RHS_AFRF/MSV/VKPO_Demiseason/Group_RHS_RF_MSV_VKPO_DS_Team_GL.et", 40),
+	            new Enemy("{F40CDA3D5A7B1CDF}Prefabs/Groups/OPFOR/RHS_AFRF/MSV/VKPO_Demiseason/Group_RHS_RF_MSV_VKPO_DS_LightFireTeam.et", 25),
+	            new Enemy("{60E2D587BE5A9B43}Prefabs/Groups/OPFOR/RHS_AFRF/MSV/VKPO_Demiseason/Group_RHS_RF_MSV_VKPO_DS_MachineGunTeam.et", 20)
+	        };
+		}
+		else if(enemyFaction == EnemyFaction.RHS_USAF)
+		{
+			enemyPrefabs = 
+	        {
+	            new Enemy("{19843E954790DF28}Prefabs/Groups/BLUFOR/RHS_USAF/RHS_USAF_USMC_MEF/Group_USAF_USMC_MEF_FireTeam.et", 50),
+	            new Enemy("{5B42785917B46C1C}Prefabs/Groups/BLUFOR/RHS_USAF/RHS_USAF_USMC_MEF/Group_USAF_USMC_MEF_Team_GL.et", 40),
+	            new Enemy("{C848B065E20A890E}Prefabs/Groups/BLUFOR/RHS_USAF/RHS_USAF_USMC_MEF/Group_USAF_USMC_MEF_LightFireTeam.et", 25),
+	            new Enemy("{559AAEF06C2AF113}Prefabs/Groups/BLUFOR/RHS_USAF/RHS_USAF_USMC_MEF/Group_USAF_USMC_MEF_MachineGunTeam.et", 20)
+	        };
+		}
+		else if(enemyFaction == EnemyFaction.INDFOR)
+		{
+			enemyPrefabs = 
+	        {
+	            new Enemy("{5BEA04939D148B1D}Prefabs/Groups/INDFOR/Group_FIA_FireTeam.et", 50),
+	            new Enemy("{2CC26054775FBA2C}Prefabs/Groups/INDFOR/Group_FIA_Team_AT.et", 40),
+	            new Enemy("{1BB20A4B3A53D0F5}Prefabs/Groups/INDFOR/Group_FIA_LightFireTeam.et", 25),
+	            new Enemy("{22F33D3EC8F281AB}Prefabs/Groups/INDFOR/Group_FIA_MachineGunTeam.et", 20)
+	        };
+		}
+		else
+		{
+			Print("Enemy faction is set to unknown value", LogLevel.ERROR);
+		}
+        
 
         waypointPrefabs = new array<ref ResourceName>();
         waypointPrefabs =

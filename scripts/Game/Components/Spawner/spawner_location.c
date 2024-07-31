@@ -17,21 +17,11 @@ class TKY_SpawnerLocation : GenericEntity
 	ref array<SCR_AIGroup> spawnedEnemies = {};
 	int scheduledSpawns = 0;
 	
-	
-	
-	/* TODO
-	random spawns
-	random spawn prefabs
-	random waypoint types -> forced move for capture, defend, move for general area clear
-	*/
-
-	
 	protected IEntity CreatePrefab(ResourceName prefab, BaseWorld myWorld, EntitySpawnParams params)
 	{
 		Resource res = Resource.Load(prefab);
 		return GetGame().SpawnEntityPrefab(res, myWorld, params);
 	}
-	
 	
 	protected bool SpawnEntity(ResourceName prefab, ResourceName waypointResource, vector waypointLocation)
 	{
